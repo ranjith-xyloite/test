@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sample page for checking Git-based application deployments.">
+    <title>Deployment Check</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #172033;
+        background: #f3f6fb;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+      }
+
+      main {
+        box-sizing: border-box;
+        width: min(92vw, 620px);
+        padding: 2.5rem;
+        border: 1px solid #dce4f0;
+        border-radius: 16px;
+        background: white;
+        box-shadow: 0 16px 48px rgb(28 45 75 / 8%);
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.4rem 0.75rem;
+        border-radius: 999px;
+        background: #e8f8ef;
+        color: #167543;
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+
+      .status::before {
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 50%;
+        background: currentColor;
+        content: "";
+      }
+
+      h1 {
+        margin: 1.25rem 0 0.5rem;
+        font-size: clamp(2rem, 7vw, 3rem);
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        color: #536078;
+        line-height: 1.6;
+      }
+
+      code {
+        padding: 0.15rem 0.35rem;
+        border-radius: 4px;
+        background: #f0f3f8;
+        color: #263653;
+      }
+
+      .details {
+        margin-top: 1.75rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #e8edf4;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="status">Nginx is serving this page</span>
+      <h1>Deployment check passed</h1>
+      <p>
+        If you can see this page, the container is serving the latest
+        <code>index.html</code> from the deployed image.
+      </p>
+      <div class="details">
+        <p><strong>Purpose:</strong> verify Git-triggered builds and deployments.</p>
+        <p><strong>Next check:</strong> change this message, push a commit, and confirm it appears after redeployment.</p>
+      </div>
+    </main>
+  </body>
+</html>
